@@ -1,12 +1,15 @@
 import streamlit as st
 
 def main():
-    st.title("My Resume")
+    st.title("Shobhit's Resume")
+
+    # Display your image
+    st.image("IMG_6043.jpg", use_column_width=True)
 
     # Buttons to toggle visibility
     with st.expander("Personal Information", expanded=True):
-        st.subheader("John Doe")
-        st.write("Software Developer")
+        st.subheader("Shobhit Srivastava")
+        st.write("Technology Analyst")
 
     with st.expander("Experience"):
         st.write("""
