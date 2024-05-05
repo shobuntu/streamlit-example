@@ -2,36 +2,31 @@ import streamlit as st
 
 def main():
     st.title("My Resume")
-    name = st.text_input("Name", "John Doe")
-    profession = st.text_input("Profession", "Software Developer")
 
-    st.header(name)
-    st.subheader(profession)
-
-    st.write("""
-        Hello! I'm {} and I work as a {}.
-        """.format(name, profession))
-
-    st.subheader("Experience")
-    exp1 = st.text_area("Experience 1", "Software Developer at XYZ Company (2019 - Present)")
-    exp2 = st.text_area("Experience 2", "Internship at ABC Tech (2018)")
-    st.write("""
-        - {}
-        - {}
-        """.format(exp1, exp2))
-
-    st.subheader("Education")
-    edu = st.text_area("Education", "Bachelor's Degree in Computer Science, University of XYZ (2015 - 2019)")
-    st.write("- {}".format(edu))
-
-    st.subheader("Skills")
-    skills = st.text_area("Skills", """
-        - Programming Languages: Python, JavaScript, Java
-        - Web Development: HTML, CSS, Flask, Django
-        - Database: SQL, MongoDB
-        - Tools & Technologies: Git, Docker, AWS
+    with st.beta_expander("About Me"):
+        st.write("""
+            Hello! I'm a software developer passionate about creating useful and efficient software solutions. 
+            I have experience in various programming languages and technologies, and I'm always eager to learn new things.
         """)
-    st.write(skills)
+
+    with st.beta_expander("Experience"):
+        st.write("""
+            - Software Developer at XYZ Company (2019 - Present)
+            - Internship at ABC Tech (2018)
+        """)
+
+    with st.beta_expander("Education"):
+        st.write("""
+            - Bachelor's Degree in Computer Science, University of XYZ (2015 - 2019)
+        """)
+
+    with st.beta_expander("Skills"):
+        st.write("""
+            - Programming Languages: Python, JavaScript, Java
+            - Web Development: HTML, CSS, Flask, Django
+            - Database: SQL, MongoDB
+            - Tools & Technologies: Git, Docker, AWS
+        """)
 
 if __name__ == "__main__":
     main()
