@@ -3,11 +3,10 @@ import streamlit as st
 def main():
     st.title("My Resume")
 
-    with st.beta_expander("About Me"):
-        st.write("""
-            Hello! I'm a software developer passionate about creating useful and efficient software solutions. 
-            I have experience in various programming languages and technologies, and I'm always eager to learn new things.
-        """)
+    # Buttons to toggle visibility
+    with st.beta_expander("Personal Information", expanded=True):
+        st.subheader("John Doe")
+        st.write("Software Developer")
 
     with st.beta_expander("Experience"):
         st.write("""
