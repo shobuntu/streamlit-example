@@ -1,12 +1,12 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="My Resume",
-    page_icon=":sunglasses:",
-    layout="wide",
-    initial_sidebar_state="auto",
-    theme="dark"
-)
+# st.set_page_config(
+#     page_title="My Resume",
+#     page_icon=":sunglasses:",
+#     layout="wide",
+#     initial_sidebar_state="auto",
+#     theme="dark"
+# )
 
 def main():
     st.title("Shobhit's Resume")
@@ -37,6 +37,7 @@ def main():
             - Database: SQL, MongoDB
             - Tools & Technologies: Git, Docker, AWS
         """)
+    st.markdown("[Download Resume PDF](myFile.pdf)", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
