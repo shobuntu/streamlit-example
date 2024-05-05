@@ -4,7 +4,7 @@ def main():
     st.title("Shobhit's Resume")
 
     # Display your image
-    st.image("IMG_6043.jpg", use_column_width=True)
+    st.image("IMG_6043.JPG", use_column_width=True)
 
     # Buttons to toggle visibility
     with st.expander("Personal Information", expanded=True):
