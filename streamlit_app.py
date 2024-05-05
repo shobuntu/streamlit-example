@@ -1,5 +1,13 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="My Resume",
+    page_icon=":sunglasses:",
+    layout="wide",
+    initial_sidebar_state="auto",
+    theme="dark"
+)
+
 def main():
     st.title("Shobhit's Resume")
 
